@@ -15,7 +15,8 @@ kubectl create -f redis_config_svc_statefulset.yaml
 
 3. Now check all pods are up or not. Once all pods are up and in running mode then run below command to setup cluster.
 ```
-kubectl exec -it redis-cluster-0  -n redis -- redis-trib create --replicas 1 $(kubectl get pods -n redis -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
+kubectl exec -it redis-cluster-0  -n redis -- redis-trib create --replicas 1 \
+$(kubectl get pods -n redis -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
 ```
 
 
