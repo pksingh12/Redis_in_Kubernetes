@@ -26,6 +26,13 @@ $(kubectl get pods -n redis -l app=redis-cluster -o jsonpath='{range.items[*]}{.
   2. redis-cli -c cluster nodes  => you should be able to see all masters and slaves
 ```
 
+5. More debugging
+```
+if you want to test its able to write keys or not use below commands to set and get keys
+  1. redis-cli -c set "keyname" "valuename"    => to set keys
+  2. redis-cli -c get "keyname"
+```
+
 
 
 
