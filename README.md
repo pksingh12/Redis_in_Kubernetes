@@ -33,7 +33,9 @@ if you want to test its able to write keys or not use below commands to set and 
   2. redis-cli -c get "keyname"                => to get keys
 ```
 
-
+For more info please refer below links:
+* https://sanderp.nl/running-redis-cluster-on-kubernetes-e451bda76cad
+* https://medium.com/zero-to/setup-persistence-redis-cluster-in-kubertenes-7d5b7ffdbd98
 
 
  
