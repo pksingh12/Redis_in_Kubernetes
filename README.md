@@ -19,6 +19,13 @@ kubectl exec -it redis-cluster-0  -n redis -- redis-trib create --replicas 1 \
 $(kubectl get pods -n redis -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
 ```
 
+4. Steps to validate cluster
+```
+* login to one of the pod and run below commands
+  1. redis-cli -c info           => you should be able to see slaves are connected
+  2. redis-cli -c cluster nodes  => you should be able to see all masters and slaves
+```
+
 
 
 
