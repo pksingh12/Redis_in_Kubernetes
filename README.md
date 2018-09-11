@@ -30,7 +30,7 @@ $(kubectl get pods -n redis -l app=redis-cluster -o jsonpath='{range.items[*]}{.
 ```
 if you want to test its able to write keys or not use below commands to set and get keys
   1. redis-cli -c set "keyname" "valuename"    => to set keys
-  2. redis-cli -c get "keyname"
+  2. redis-cli -c get "keyname"                => to get keys
 ```
 
 
