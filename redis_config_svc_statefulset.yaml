@@ -60,7 +60,7 @@ items:
     uid: 851a20c6-9acf-11e8-8c8b-42010a8000a2
   spec:
     podManagementPolicy: OrderedReady
-    replicas: 3
+    replicas: 6
     revisionHistoryLimit: 10
     selector:
       matchLabels:
